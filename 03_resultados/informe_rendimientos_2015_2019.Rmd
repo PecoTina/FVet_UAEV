@@ -6,7 +6,7 @@ header-includes:
    \pagestyle{fancy} 
    \setlength\headheight{32.20862pt}
    \fancyhead[L]{\includegraphics[width=0.8cm]{`r paste0(dirname(getwd()), "/img/logo_udelar_azul.png")`}}
-   \fancyhead[C]{UNIDAD ACADÉMICA DE EDUCACIÓN VETERINARIA, Facultad de Veterinaria - UdelaR}
+   \fancyhead[C]{UNIDAD DE EDUCACIÓN VETERINARIA, Facultad de Veterinaria - UdelaR}
    \fancyfoot[L]{Tel:1903 int.xxxx al xxxx - devfvet@fvet.edu.uy}
    \fancyfoot[R]{Ruta 8 y Ruta 102, Edificio INV-C} 
    \pagenumbering{gobble}
@@ -42,7 +42,7 @@ library(tidyverse); library(knitr); library(kableExtra); library(here)
 
 # NOVIEMBRE 2022
 
-## RENDIMIENTOS 2015 - 2019
+## RENDIMIENTOS DE LOS CURSOS 2015 - 2019
 
 #
 
@@ -57,17 +57,20 @@ Docente G1, Unidad de Bioestadística
 
 Departamento de Salud Pública, Facultad de Veterinaria
 
+vbianchinotti@fvet.edu.uy
 \end{flushleft}
 \newpage
 
 \begin{flushleft}
-A continuación se presentan información de los rendimientos 2015 -2019.
+A continuación se presentan información de los rendimientos de los cursos durante los años 2015 a 2019.
 
-Los datos provienen del bando de datos de Bedelía del servicio y se presentan como el total de exámenes rendidos por año para cada materia de la carrera para la obtención del título Dr en Ciencias Veterinarias Plan 1998
+Los datos provienen del bando de datos de Bedelía del servicio y se presentan como el total alumnos que cursaron cada materia por año y su rendimiento durante la carrera para la obtención del título Dr en Ciencias Veterinarias Plan 1998
 \end{flushleft}
 
 #
 
+## MATERIAS DE PRIMER AÑO
+ 
 ```{r, echo=FALSE, fig.align='center', out.width='60%'}
 datos98101
 
@@ -85,3 +88,86 @@ datos98107
 
 datos98108
 ```
+
+\newpage
+
+## MATERIAS DE SEGUNDO AÑO
+ 
+```{r, echo=FALSE, fig.align='center', out.width='60%'}
+datos98201
+
+datos98202
+
+datos98203
+
+datos98204
+
+datos98205
+
+datos98206
+
+datos98207
+
+datos98208
+```
+
+\newpage
+
+## MATERIAS DE TERCER AÑO
+ 
+```{r, echo=FALSE, fig.align='center', out.width='60%'}
+datos98301
+
+datos98302
+
+datos98303
+
+datos98304
+
+datos98305
+
+datos98306
+
+datos98307
+
+datos98308
+
+datos98309
+
+datos98310
+```
+
+\newpage
+
+## MATERIAS DE CUARTO AÑO
+ 
+```{r, echo=FALSE, fig.align='center', out.width='60%'}
+datos98401
+
+datos98402
+
+datos98403
+
+datos98404
+
+datos98405
+
+datos98406
+
+datos98407
+```
+
+\newpage
+
+## MATERIAS DE QUINTO AÑO
+ 
+```{r, echo=FALSE, fig.align='center', out.width='60%'}
+datos98501
+
+datos98502
+
+datos98503
+
+datos98504
+```
+
