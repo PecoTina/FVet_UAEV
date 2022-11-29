@@ -1,0 +1,87 @@
+---
+geometry: margin=2cm
+header-includes: 
+   \usepackage{graphicx} 
+   \usepackage{fancyhdr} 
+   \pagestyle{fancy} 
+   \setlength\headheight{32.20862pt}
+   \fancyhead[L]{\includegraphics[width=0.8cm]{`r paste0(dirname(getwd()), "/img/logo_udelar_azul.png")`}}
+   \fancyhead[C]{UNIDAD ACADÉMICA DE EDUCACIÓN VETERINARIA, Facultad de Veterinaria - UdelaR}
+   \fancyfoot[L]{Tel:1903 int.xxxx al xxxx - devfvet@fvet.edu.uy}
+   \fancyfoot[R]{Ruta 8 y Ruta 102, Edificio INV-C} 
+   \pagenumbering{gobble}
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document:
+    df_print: paged
+mainfont: Arial
+linestretch: 1
+fontsize: 11pt
+---
+\rhead{\includegraphics[width=1cm]{`r paste0(dirname(getwd()), "/img/logo_fvet_transparente.png")`}}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(tidyverse); library(knitr); library(kableExtra); library(here)
+```
+
+\center
+
+#
+
+#
+
+#
+
+#
+
+#
+
+# PROYECTO LECCIONES APRENDIDAS 2020-2021
+
+# NOVIEMBRE 2022
+
+## RENDIMIENTOS 2015 - 2019
+
+#
+
+#
+
+\vskip 55mm
+
+\begin{flushleft}
+Vernadet Bianchinotti
+
+Docente G1, Unidad de Bioestadística
+
+Departamento de Salud Pública, Facultad de Veterinaria
+
+\end{flushleft}
+\newpage
+
+\begin{flushleft}
+A continuación se presentan información de los rendimientos 2015 -2019.
+
+Los datos provienen del bando de datos de Bedelía del servicio y se presentan como el total de exámenes rendidos por año para cada materia de la carrera para la obtención del título Dr en Ciencias Veterinarias Plan 1998
+\end{flushleft}
+
+#
+
+```{r, echo=FALSE, fig.align='center', out.width='60%'}
+datos98101
+
+datos98102
+
+datos98103
+
+datos98104
+
+datos98105
+
+datos98106
+
+datos98107
+
+datos98108
+```
