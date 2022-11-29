@@ -65,12 +65,12 @@ datos98101 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("Bio. Molecular y Celular") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
-  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83"))
 
 #50c878  #85bb65 #00a86b  #29ab87
 #0d98ba  #26619c  #0077be
@@ -85,11 +85,11 @@ datos98102 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("CIEV") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
   scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
@@ -101,11 +101,11 @@ datos98103 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("Bioestadística I") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
   scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
@@ -117,12 +117,12 @@ datos98104 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("Inglés técnico I") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
-  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+  scale_fill_manual(values = c("#26619c")) 
 
 
 ### Anatomia normal
@@ -133,11 +133,11 @@ datos98105 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("Anatomía normal") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
   scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
@@ -149,11 +149,11 @@ datos98106 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("Hist. y embriología del desarrollo") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
   scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
@@ -165,11 +165,11 @@ datos98107 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("Genética general") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
   scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
@@ -181,12 +181,13 @@ datos98108 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("Inglés técnico II") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
-  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+  scale_color_manual(values = c("#0d98ba")) +
+  scale_fill_manual(values = c("#26619c")) 
 
 
 ### Fisiologia
@@ -197,23 +198,463 @@ datos98201 <- datos %>%
   summarise(n = n()) %>%
   ggplot(aes(x = ano, y = n, fill = resultado)) +
   geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
   mi_tema +
   labs (x = "año",
-        y = "cantidad de examenes rendidos por año") +
+        y = "resultados del curso por año") +
   ggtitle("Fisiología") + 
-  scale_color_manual(values = c("#50c878", "#0d98ba", "#e52b50")) +
   scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
+### Microbiología
+
+datos98202 <- datos %>% 
+  filter(codigo_materia == "98202") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Microbiología") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
+### Inmunologia basica
+
+datos98203 <- datos %>% 
+  filter(codigo_materia == "98203") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Inmunología básica") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
+### Zootecnia (tecnologia)
+
+datos98204 <- datos %>% 
+  filter(codigo_materia == "98204") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Zootecnia (Tecnología)") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
+### Patologia funcional y morfologia
+
+datos98205 <- datos %>% 
+  filter(codigo_materia == "98205") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Patología funcional y morfología)") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
 
 
-# datos$materia[datos$codigo_materia == "98201"]
+### Sefmiologia
+
+datos98206 <- datos %>% 
+  filter(codigo_materia == "98206") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Semiología") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Farmacologia basica
+
+datos98207 <- datos %>% 
+  filter(codigo_materia == "98207") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Farmacología básica") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Nutricion
+
+datos98208 <- datos %>% 
+  filter(codigo_materia == "98208") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Nutrición") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Enfermedades infecciosas
+
+datos98301 <- datos %>% 
+  filter(codigo_materia == "98301") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Enfermedades infecciosas") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Parasitologia y enfermedades parasitarias
+
+datos98302 <- datos %>% 
+  filter(codigo_materia == "98302") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Parasitología y enfermedades parasitarias") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Toxicologia y enfermedades toxicologicas
+
+datos98303 <- datos %>% 
+  filter(codigo_materia == "98303") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Toxicología y enfermedades toxicológicas") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Medicina preventiva y epidemiología
+
+datos98304 <- datos %>% 
+  filter(codigo_materia == "98304") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Medicina preventiva y epidemiología") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Patologia y clinica de peq animales
+
+datos98305 <- datos %>% 
+  filter(codigo_materia == "98305") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Patología y clínica de pequeños animales") + 
+  scale_fill_manual(values = c("#85bb65", "#ec3b83")) 
+
+
+### Patologia y clinica de equinos I
+
+datos98306 <- datos %>% 
+  filter(codigo_materia == "98306") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Patología y clínica de equinos I") + 
+  scale_fill_manual(values = c("#85bb65", "#ec3b83")) 
+
+
+### Parología y clinica rumiantes y suinos I
+
+datos98307 <- datos %>% 
+  filter(codigo_materia == "98307") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Patología y clínica rumiantes y suinos I") + 
+  scale_fill_manual(values = c("#85bb65", "#ec3b83")) 
+
+
+### Teriogenologia I
+
+datos98308 <- datos %>% 
+  filter(codigo_materia == "98308") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Teriogenología") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Tecnica quirurgica
+
+datos98309 <- datos %>% 
+  filter(codigo_materia == "98309") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Técnica quirúrgica") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Legislacion sanitaria
+
+datos98310 <- datos %>% 
+  filter(codigo_materia == "98310") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Legislación sanitaria") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Produccion de rumiantes I
+
+datos98401 <- datos %>% 
+  filter(codigo_materia == "98401") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Producción de rumiantes I") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Prod de suinos y animales de granja I
+
+datos98402 <- datos %>% 
+  filter(codigo_materia == "98402") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Producción de suinos y animales de granja I") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Alimentacion
+
+datos98403 <- datos %>% 
+  filter(codigo_materia == "98403") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Alimentación") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Economía y administración agropecuaria
+
+datos98404 <- datos %>% 
+  filter(codigo_materia == "98404") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Economía y administración agropecuaria") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Mejora genetica
+
+datos98405 <- datos %>% 
+  filter(codigo_materia == "98405") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Mejora genética") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Legislacion agraria
+
+datos98406 <- datos %>% 
+  filter(codigo_materia == "98406") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Lesgilación agraria") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Patologia, clinica y produccion avicola
+
+datos98407 <- datos %>% 
+  filter(codigo_materia == "98407") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Patología, clínica y producción avícola") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Higiene, inspeccion-control de alimentos de origen animal
+
+datos98501 <- datos %>% 
+  filter(codigo_materia == "98501") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Higiene, inspección-control de alimentos de origen animal") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Ciencia y tecnologia de alimentos de origen animal
+
+datos98502 <- datos %>% 
+  filter(codigo_materia == "98502") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Ciencia y tecnología de alimentos de origen animal") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Salud publica veterinaria
+
+datos98503 <- datos %>% 
+  filter(codigo_materia == "98503") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Salud pública veterinaria") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+### Legislacion alimentaria y ambiental
+
+datos98504 <- datos %>% 
+  filter(codigo_materia == "98504") %>% 
+  group_by(ano, resultado) %>% 
+  summarise(n = n()) %>%
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position=position_dodge(width=0.9), vjust=-0.25) +
+  mi_tema +
+  labs (x = "año",
+        y = "resultados del curso por año") +
+  ggtitle("Legislación alimentaria y ambiental") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) 
+
+
+# datos$materia[datos$codigo_materia == "98505"]
 
 # Render Dashboard --------------------------------------------------------
 
