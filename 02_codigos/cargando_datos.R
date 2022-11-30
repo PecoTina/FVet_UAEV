@@ -29,6 +29,8 @@ datos_bed <- datos_bed %>%
                 fecha,
                 servicio_instancia) %>% 
   filter(str_detect(codigo_materia, "98")) %>% 
-  filter(codigo_materia != "1098")
+  filter(codigo_materia != "1098") %>% 
+  filter(materia != "INGLES TECNICO (OPCIONAL)") %>% 
+  filter(materia != "INGLES TECNICO II (OPCIONAL)")
 
 
