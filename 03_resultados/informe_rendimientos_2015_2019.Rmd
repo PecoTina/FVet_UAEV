@@ -62,7 +62,7 @@ vbianchinotti@fvet.edu.uy
 \newpage
 
 \begin{flushleft}
-A continuación se presentan información de los rendimientos de los cursos durante los años 2015 a 2019.
+A continuación se presenta información de los rendimientos de los cursos durante los años 2015 a 2019.
 
 Los datos provienen del bando de datos de Bedelía del servicio y se presentan como el total alumnos que cursaron cada materia por año y su rendimiento durante la carrera para la obtención del título Dr en Ciencias Veterinarias Plan 1998
 \end{flushleft}
@@ -170,4 +170,13 @@ datos98503
 
 datos98504
 ```
+
+\newpage
+
+## DATOS POR AÑO 
+
+```{r, echo=FALSE, fig.align='center', fig.height=14, fig.width=12}
+datos_981
+```
+
 
