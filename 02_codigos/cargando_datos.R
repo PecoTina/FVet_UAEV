@@ -3,7 +3,7 @@ library(tidyverse)
 library(janitor)
 
 # cargo la planilla de datos con todos los registros
-datos <- data_frame(read_csv("01_datos/rendimientos_2015_2019.csv", 
+datos_bed <- data_frame(read_csv("01_datos/rendimientos_2015_2019.csv", 
                             col_types = cols(Aprobado = col_factor(levels = c()), 
                                              `Código materia` = col_factor(levels = c()), 
                                              Materia = col_factor(levels = c()), 
@@ -20,7 +20,7 @@ datos <- data_frame(read_csv("01_datos/rendimientos_2015_2019.csv",
 
 # filtrado por materias curriculares --------------------------------------
 
-datos <- datos %>%
+datos_bed <- datos_bed %>%
   dplyr::select(servicio, 
                 codigo_materia, 
                 materia, 
