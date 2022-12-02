@@ -62,9 +62,9 @@ vbianchinotti@fvet.edu.uy
 \newpage
 
 \begin{flushleft}
-A continuación se presenta información de los rendimientos de los cursos durante los años 2015 a 2019.
+A continuación se presenta información de los rendimientos de los cursos obligatorios durante el período 2015 a 2019 de la carrera para la obtención del título Doctor en Ciencias Veterinarias Plan 98.
 
-Los datos provienen del banco de datos de Bedelía del servicio y se presentan como el total alumnos que cursaron cada materia por año y su rendimiento durante la carrera para la obtención del título Dr en Ciencias Veterinarias Plan 1998
+Los datos provienen del banco de datos de Bedelía del Servicio
 \end{flushleft}
 
 # DATOS POR MATERIA
