@@ -67,26 +67,35 @@ A continuación se presenta información de los rendimientos de los cursos duran
 Los datos provienen del banco de datos de Bedelía del servicio y se presentan como el total alumnos que cursaron cada materia por año y su rendimiento durante la carrera para la obtención del título Dr en Ciencias Veterinarias Plan 1998
 \end{flushleft}
 
-#
+# DATOS POR MATERIA
 
-```{r, echo=FALSE, fig.align='center', out.width='60%'}
-datos_981
+```{r, echo=FALSE, fig.align='center', fig.height=16, fig.width=12}
+datos_981_m
 
-datos_982
+datos_982_m
 
-datos_983
+datos_983_m
 
-datos_984
+datos_984_m
 
-datos_985
+datos_985_m
 ```
 
 \newpage
 
-## DATOS POR AÑO 
+## DATOS POR AÑO LECTIVO
 
-```{r, echo=FALSE, fig.align='center', fig.height=14, fig.width=12}
-datos_981
+```{r, echo=FALSE, fig.align='center', fig.height=16, fig.width=12}
+datos_981_a
+
+datos_982_a
+
+datos_983_a
+
+datos_984_a
+
+datos_985_a
+
 ```
 
 
