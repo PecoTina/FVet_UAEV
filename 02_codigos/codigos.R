@@ -51,7 +51,7 @@ datos <- datos %>%
 
 # datos por materia de 2015 a 2019 ----------------------------------------
 
-datos_981 <- datos %>% 
+datos_981_m <- datos %>% 
   filter(str_detect(codigo_materia, "981")) %>%
   group_by(materia, ano, resultado) %>% 
   summarise(n = n()) %>%
@@ -74,7 +74,7 @@ datos_981 <- datos %>%
 #0d98ba  #26619c  #0077be
 #e52b50  #ec3b83  #e75480
 
-datos$materia[datos$codigo_materia == "98205"]
+# datos$materia[datos$codigo_materia == "98205"]
 
 ### 98101 BIOLOGIA CELULAR Y MOLECULAR
 ### 98102 C.I.E.V.
@@ -112,10 +112,85 @@ datos$materia[datos$codigo_materia == "98205"]
 ### 98503 Salud publica veterinaria
 ### 98504 Legislacion alimentaria y ambiental
 
+datos_982_m <- datos %>% 
+  filter(str_detect(codigo_materia, "982")) %>%
+  group_by(materia, ano, resultado) %>% 
+  summarise(n = n()) %>%
+  mutate(porc = (n / sum(n) *100)) %>% 
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label= paste(round(porc), "%")), 
+            position = position_dodge(width = 0.9), vjust=-0.25, size = 2.5) +
+  mi_tema +
+  theme(legend.title = element_text(),
+        axis.text.x = element_text(angle = -90, vjust = 1, hjust = 0)) +
+  labs (x = "materia",
+        y = "resultados del curso por año") +
+  ggtitle("RENDIMIENTOS SEGUNDO AÑO POR MATERIA") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) +
+  facet_wrap(materia ~ ., ncol = 1) +
+  theme(strip.text.y = element_text(angle = -90))
+
+datos_983_m <- datos %>% 
+  filter(str_detect(codigo_materia, "983")) %>%
+  group_by(materia, ano, resultado) %>% 
+  summarise(n = n()) %>%
+  mutate(porc = (n / sum(n) *100)) %>% 
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label= paste(round(porc), "%")), 
+            position = position_dodge(width = 0.9), vjust=-0.25, size = 2.5) +
+  mi_tema +
+  theme(legend.title = element_text(),
+        axis.text.x = element_text(angle = -90, vjust = 1, hjust = 0)) +
+  labs (x = "materia",
+        y = "resultados del curso por año") +
+  ggtitle("RENDIMIENTOS TERCER AÑO POR MATERIA") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) +
+  facet_wrap(materia ~ ., ncol = 1) +
+  theme(strip.text.y = element_text(angle = -90))
+
+datos_984_m <- datos %>% 
+  filter(str_detect(codigo_materia, "984")) %>%
+  group_by(materia, ano, resultado) %>% 
+  summarise(n = n()) %>%
+  mutate(porc = (n / sum(n) *100)) %>% 
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label= paste(round(porc), "%")), 
+            position = position_dodge(width = 0.9), vjust=-0.25, size = 2.5) +
+  mi_tema +
+  theme(legend.title = element_text(),
+        axis.text.x = element_text(angle = -90, vjust = 1, hjust = 0)) +
+  labs (x = "materia",
+        y = "resultados del curso por año") +
+  ggtitle("RENDIMIENTOS CUARTO AÑO POR MATERIA") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) +
+  facet_wrap(materia ~ ., ncol = 1) +
+  theme(strip.text.y = element_text(angle = -90))
+
+datos_985_m <- datos %>% 
+  filter(str_detect(codigo_materia, "985")) %>%
+  group_by(materia, ano, resultado) %>% 
+  summarise(n = n()) %>%
+  mutate(porc = (n / sum(n) *100)) %>% 
+  ggplot(aes(x = ano, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label= paste(round(porc), "%")), 
+            position = position_dodge(width = 0.9), vjust=-0.25, size = 2.5) +
+  mi_tema +
+  theme(legend.title = element_text(),
+        axis.text.x = element_text(angle = -90, vjust = 1, hjust = 0)) +
+  labs (x = "materia",
+        y = "resultados del curso por año") +
+  ggtitle("RENDIMIENTOS QUINTO AÑO POR MATERIA") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) +
+  facet_wrap(materia ~ ., ncol = 1) +
+  theme(strip.text.y = element_text(angle = -90))
 
 # datos por ano lectivo y ano curricular ------------------------------------------------
 
-datos_981 <- datos %>% 
+datos_981_a <- datos %>% 
   filter(str_detect(codigo_materia, "981")) %>%
   group_by(codigo_materia, ano, resultado) %>% 
   summarise(n = n()) %>%
@@ -134,7 +209,81 @@ datos_981 <- datos %>%
   facet_wrap(ano ~ ., ncol = 1) +
   theme(strip.text.y = element_text(angle = -90))
 
+datos_982_a <- datos %>% 
+  filter(str_detect(codigo_materia, "982")) %>%
+  group_by(codigo_materia, ano, resultado) %>% 
+  summarise(n = n()) %>%
+  mutate(porc = (n / sum(n) *100)) %>% 
+  ggplot(aes(x = codigo_materia, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label= paste(round(porc), "%")), 
+            position = position_dodge(width = 0.9), vjust=-0.25, size = 2.5) +
+  mi_tema +
+  theme(legend.title = element_text(),
+        axis.text.x = element_text(angle = -90, vjust = 1, hjust = 0)) +
+  labs (x = "materia",
+        y = "resultados del curso por año") +
+  ggtitle("MATERIAS DE SEGUNDO AÑO") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) +
+  facet_wrap(ano ~ ., ncol = 1) +
+  theme(strip.text.y = element_text(angle = -90))
 
+datos_983_a <- datos %>% 
+  filter(str_detect(codigo_materia, "983")) %>%
+  group_by(codigo_materia, ano, resultado) %>% 
+  summarise(n = n()) %>%
+  mutate(porc = (n / sum(n) *100)) %>% 
+  ggplot(aes(x = codigo_materia, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label= paste(round(porc), "%")), 
+            position = position_dodge(width = 0.9), vjust=-0.25, size = 2.5) +
+  mi_tema +
+  theme(legend.title = element_text(),
+        axis.text.x = element_text(angle = -90, vjust = 1, hjust = 0)) +
+  labs (x = "materia",
+        y = "resultados del curso por año") +
+  ggtitle("MATERIAS DE TERCER AÑO") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) +
+  facet_wrap(ano ~ ., ncol = 1) +
+  theme(strip.text.y = element_text(angle = -90))
+
+datos_984_a <- datos %>% 
+  filter(str_detect(codigo_materia, "984")) %>%
+  group_by(codigo_materia, ano, resultado) %>% 
+  summarise(n = n()) %>%
+  mutate(porc = (n / sum(n) *100)) %>% 
+  ggplot(aes(x = codigo_materia, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label= paste(round(porc), "%")), 
+            position = position_dodge(width = 0.9), vjust=-0.25, size = 2.5) +
+  mi_tema +
+  theme(legend.title = element_text(),
+        axis.text.x = element_text(angle = -90, vjust = 1, hjust = 0)) +
+  labs (x = "materia",
+        y = "resultados del curso por año") +
+  ggtitle("MATERIAS DE CUARTO AÑO") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) +
+  facet_wrap(ano ~ ., ncol = 1) +
+  theme(strip.text.y = element_text(angle = -90))
+
+datos_985_a <- datos %>% 
+  filter(str_detect(codigo_materia, "985")) %>%
+  group_by(codigo_materia, ano, resultado) %>% 
+  summarise(n = n()) %>%
+  mutate(porc = (n / sum(n) *100)) %>% 
+  ggplot(aes(x = codigo_materia, y = n, fill = resultado)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label= paste(round(porc), "%")), 
+            position = position_dodge(width = 0.9), vjust=-0.25, size = 2.5) +
+  mi_tema +
+  theme(legend.title = element_text(),
+        axis.text.x = element_text(angle = -90, vjust = 1, hjust = 0)) +
+  labs (x = "materia",
+        y = "resultados del curso por año") +
+  ggtitle("MATERIAS DE QUINTO AÑO") + 
+  scale_fill_manual(values = c("#85bb65", "#26619c", "#ec3b83")) +
+  facet_wrap(ano ~ ., ncol = 1) +
+  theme(strip.text.y = element_text(angle = -90))
 
 
 
