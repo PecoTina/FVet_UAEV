@@ -69,9 +69,11 @@ vbianchinotti@fvet.edu.uy
 
 \newpage
 
-A continuación se presentan los rendimientos de cursos dictados en Facultad de Veterianaria durante el período 2015 - 2019.
 
-Los datos provienen del banco de datos de Bedelía del Servicio y corresponden a los cursos obligatorios de la carrera para la obtención del título Doctor en Ciencias Veterinarias Plan 98.
+
+A continuación se presenta información de los rendimientos de los cursos obligatorios durante el período 2015 a 2019 de la carrera para la obtención del título Doctor en Ciencias Veterinarias Plan 98.
+
+Los datos provienen del banco de datos de Bedelía del Servicio
 
 
 ```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Biología molecular y celular durante el período 2015 - 2019"}
