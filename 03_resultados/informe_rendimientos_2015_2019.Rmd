@@ -26,7 +26,10 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(tidyverse); library(knitr); library(kableExtra); library(here)
 ```
 
-\center
+<style>
+body {
+text-align: justify}
+</style>
 
 #
 
@@ -38,18 +41,22 @@ library(tidyverse); library(knitr); library(kableExtra); library(here)
 
 #
 
-# PROYECTO LECCIONES APRENDIDAS 2020-2021
-
-# `r format(Sys.Date(), format = "%d - %b - %Y")`
-
-## RENDIMIENTOS DE LOS CURSOS 2015 - 2019
-
 #
 
-#
+\begin{center}
+{\bf
+\LARGE
+PROYECTO LECCIONES APRENDIDAS 2020-2021
 
-\vskip 55mm
+\Large
+`r format(Sys.Date(), format = "%d - %b - %Y")`
 
+RENDIMIENTOS DE LOS CURSOS 2015 - 2019
+}
+\end{center}
+
+
+\vskip 65mm
 \begin{flushleft}
 Vernadet Bianchinotti
 
@@ -59,43 +66,358 @@ Departamento de Salud Pública, Facultad de Veterinaria
 
 vbianchinotti@fvet.edu.uy
 \end{flushleft}
+
 \newpage
 
-\begin{flushleft}
-A continuación se presenta información de los rendimientos de los cursos durante los años 2015 a 2019.
+A continuación se presentan los rendimientos de cursos dictados en Facultad de Veterianaria durante el período 2015 - 2019.
 
-Los datos provienen del banco de datos de Bedelía del servicio y se presentan como el total alumnos que cursaron cada materia por año y su rendimiento durante la carrera para la obtención del título Dr en Ciencias Veterinarias Plan 1998
-\end{flushleft}
+Los datos provienen del banco de datos de Bedelía del Servicio y corresponden a los cursos obligatorios de la carrera para la obtención del título Doctor en Ciencias Veterinarias Plan 98.
 
-# DATOS POR MATERIA
 
-```{r, echo=FALSE, fig.align='center', fig.height=16, fig.width=12}
-datos_981_m
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Biología molecular y celular durante el período 2015 - 2019"}
+g_datos_98101
+```
 
-datos_982_m
-
-datos_983_m
-
-datos_984_m
-
-datos_985_m
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98101
 ```
 
 \newpage
 
-## DATOS POR AÑO LECTIVO
-
-```{r, echo=FALSE, fig.align='center', fig.height=16, fig.width=12}
-datos_981_a
-
-datos_982_a
-
-datos_983_a
-
-datos_984_a
-
-datos_985_a
-
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para CIEV durante el período 2015 - 2019"}
+g_datos_98102
 ```
 
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98102
+```
 
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Bioestadística durante el período 2015 - 2019"}
+g_datos_98103
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98103
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Anatomía durante el período 2015 - 2019"}
+g_datos_98105
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98105
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Histología durante el período 2015 - 2019"}
+g_datos_98106
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98106
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Genética durante el período 2015 - 2019"}
+g_datos_98107
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98107
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Fisiología durante el período 2015 - 2019"}
+g_datos_98201
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98201
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Microbiología durante el período 2015 - 2019"}
+g_datos_98202
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98202
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Inmunología durante el período 2015 - 2019"}
+g_datos_98203
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98203
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Zootecnia durante el período 2015 - 2019"}
+g_datos_98204
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98204
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Patología durante el período 2015 - 2019"}
+g_datos_98205
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98205
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Semiología durante el período 2015 - 2019"}
+g_datos_98206
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98206
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Farmacología durante el período 2015 - 2019"}
+g_datos_98207
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98207
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Nutrición durante el período 2015 - 2019"}
+g_datos_98208
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98208
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Enfermedades infecciosas durante el período 2015 - 2019"}
+g_datos_98301
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98301
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Parasitología durante el período 2015 - 2019"}
+g_datos_98302
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98302
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Toxicología durante el período 2015 - 2019"}
+g_datos_98303
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98303
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Epidemiología durante el período 2015 - 2019"}
+g_datos_98304
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98304
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Clínica de pequeños durante el período 2015 - 2019"}
+g_datos_98305
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98305
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Clínica de equinos durante el período 2015 - 2019"}
+g_datos_98306
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98306
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Clínica de rumiantes durante el período 2015 - 2019"}
+g_datos_98307
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98307
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Teriogenología durante el período 2015 - 2019"}
+g_datos_98308
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98308
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Técnica quirúrgica durante el período 2015 - 2019"}
+g_datos_98309
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98309
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Legislación sanitaria durante el período 2015 - 2019"}
+g_datos_98310
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98310
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Producción de rumiantes durante el período 2015 - 2019"}
+g_datos_98401
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98401
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Producción de suinos durante el período 2015 - 2019"}
+g_datos_98402
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98402
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Alimentación durante el período 2015 - 2019"}
+g_datos_98403
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98403
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Economía durante el período 2015 - 2019"}
+g_datos_98404
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98404
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Mejora durante el período 2015 - 2019"}
+g_datos_98405
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98405
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Legislación agraria durante el período 2015 - 2019"}
+g_datos_98406
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98406
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Patología durante el período 2015 - 2019"}
+g_datos_98407
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98407
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Higiene durante el período 2015 - 2019"}
+g_datos_98501
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98501
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Ciencia y tecnología durante el período 2015 - 2019"}
+g_datos_98502
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98502
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Salud pública durante el período 2015 - 2019"}
+g_datos_98503
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98503
+```
+
+\newpage
+
+```{r, echo=FALSE, fig.align='center', out.width="60%", fig.cap="Rendimientos para Legislación alimentaria durante el período 2015 - 2019"}
+g_datos_98504
+```
+
+```{r, echo=FALSE, fig.align='center', results='asis'}
+tb_datos_98504
+```
