@@ -10,6 +10,7 @@ library(gghalves)
 library(patchwork) 
 library(plotly)
 library(chisq.posthoc.test)
+library(RVAideMemoire)
 # datos -------------------------------------------------------------------
 
 # cargo los datos con los cursos obligatorios
@@ -26,6 +27,7 @@ c_datos_98101 <- data.frame(t_datos_98101[-1])
 row.names(t_datos_98101$resultado)
 chisq.test(c_datos_98101)
 chisq.posthoc.test(c_datos_98101)
+chisq.multcomp(c_datos_98101)
 
 # CIEV
 c_datos_98102 <- data.frame(t_datos_98102[-1])
